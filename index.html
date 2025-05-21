@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tanya Bhardwaj | Software Developer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding-top: 70px;
+      font-family: "Montserrat", sans-serif;
+      background: radial-gradient(ellipse at center, #1c1c1c 0%, #0a0a0a 100%);
+      background-attachment: fixed;
+      color: #e0e0e0;
+      position: relative;
+    }
+
+    h1, h2, h3, h4 {
+      color: #a4f9ef;
+    }
+
+    .topnav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #111;
+      z-index: 999;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      border-bottom: 1px solid #333;
+    }
+
+    .topnav a {
+      color: #bbb;
+      text-decoration: none;
+      padding: 8px 12px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .topnav a:hover {
+      color: #64ffda;
+    }
+
+    .topnav a.active {
+      color: #0ff;
+      border-bottom: 2px solid #0ff;
+    }
+
+    .neon-button {
+      background: transparent;
+      border: 1px solid #0ff;
+      color: #0ff;
+      padding: 10px 20px;
+      margin-top: 10px;
+      transition: 0.3s ease-in-out;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .neon-button:hover {
+      background-color: #0ff;
+      color: #000;
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    header#home {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .svg-wave {
+      display: block;
+      width: 100%;
+      height: 80px;
+    }
+
+    .wave-top {
+      margin-top: -80px;
+    }
+
+    .hidden { display: none; }
+    .read-more-section p { margin-bottom: 10px; }
+
+    /* Cursor glow */
+    #cursor-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(100, 255, 218, 0.1), transparent 70%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      filter: blur(50px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Cursor Glow -->
+  <div id="cursor-glow"></div>
+
+  <!-- Top Navbar -->
+  <div class="topnav">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Experience</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#blog" class="nav-link">Blogs</a>
+    <a href="#resume" class="nav-link">Resume</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </div>
+
+  <!-- Top SVG Wave -->
+  <svg class="svg-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#0a0a0a" d="M0,0L1440,100L1440,0L0,0Z"></path></svg>
+
+  <!-- Header -->
+  <header class="w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">Tanya</span> Bhardwaj</h1>
+    <p>Software Developer • Cybersecurity Enthusiast</p>
+  </header>
+
+  <!-- About -->
+  <section class="w3-content w3-justify w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">About Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <div class="read-more-section">
+      <p>
+        I’m Tanya Bhardwaj — a builder, breaker, and lifelong learner with a deep interest in cybersecurity. My journey in tech began with writing simple Python scripts, and over time, it evolved into building full-stack tools, exploring offensive security, and solving real-world problems through OSINT investigations and bug bounty research.
+      </p>
+      <div id="more-about" class="hidden">
+        <p>
+          I specialize in building tools using Python, contributing to open-source security projects, and automating ethical hacking workflows. I enjoy working at the intersection of development and security, crafting solutions that are both efficient and insightful.
+        </p>
+      </div>
+      <button class="neon-button" onclick="toggleReadMore()">Read More</button>
+    </div>
+  </section>
+
+  <!-- Skills / Experience -->
+  <section class="w3-content w3-justify w3-padding-64" id="skills">
+    <h2 class="w3-text-light-grey">Experience</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Here are some technologies and tools I’ve been working with recently:</p>
+    <div class="w3-row-padding w3-text-light-grey w3-padding-16">
+      <div class="w3-half">
+        <h4>Development</h4>
+        <ul class="w3-ul">
+          <li>HTML5, CSS3</li>
+          <li>JavaScript (Basics)</li>
+          <li>Python (Scripting, Automation)</li>
+          <li>Flask & Bootstrap</li>
+          <li>Responsive Web Design</li>
+        </ul>
+      </div>
+      <div class="w3-half">
+        <h4>Security & Tools</h4>
+        <ul class="w3-ul">
+          <li>Ethical Hacking</li>
+          <li>Bug Bounty Hunting</li>
+          <li>OSINT (Phone, Email, Domain)</li>
+          <li>Cybersecurity Tools</li>
+          <li>Kali Linux, Git, GitHub</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="w3-padding-64 w3-content" id="projects">
+    <h2 class="w3-text-light-grey">Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <div id="github-projects" class="w3-row-padding"></div>
+  </section>
+
+  <!-- Blogs -->
+  <section class="w3-padding-64 w3-content" id="blog">
+    <h2 class="w3-text-light-grey">Latest Blogs</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <div id="medium-posts"></div>
+  </section>
+
+  <!-- Resume -->
+  <section class="w3-padding-64 w3-content" id="resume">
+    <h2 class="w3-text-light-grey">Resume</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <a href="resume.pdf" target="_blank" class="neon-button"><i class="fa fa-download"></i> Download Resume</a>
+  </section>
+
+  <!-- Contact -->
+  <section class="w3-padding-64 w3-content" id="contact">
+    <h2 class="w3-text-light-grey">Get In Touch</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>If you're looking to collaborate or just want to say hello, feel free to reach out.</p>
+    <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+      <a href="mailto:tanyabhardwaj787@gmail.com">tanyabhardwaj787@gmail.com</a>
+    </p>
+    <a class="neon-button" href="mailto:tanyabhardwaj787@gmail.com">
+      <i class="fa fa-paper-plane"></i> Say Hello
+    </a>
+  </section>
+
+  <!-- Bottom SVG Wave -->
+  <svg class="svg-wave wave-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#0a0a0a" d="M0,100L1440,0L1440,100L0,100Z"></path></svg>
+
+  <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <a href="https://www.instagram.com/tanya_bhardwaj20" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/tanya-bhardwaj-870a37261/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://medium.com/@tanya-bhardwaj20" target="_blank"><i class="fa fa-medium w3-hover-opacity"></i></a>
+    <a href="https://x.com/tanya_bhardwaj2" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <div class="w3-small w3-margin-top w3-text-grey">
+      Designed & Built by Tanya Bhardwaj<br>
+      <p>© 2025 tanyabhardwaj.com. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleReadMore() {
+      const more = document.getElementById("more-about");
+      const btn = event.target;
+      more.classList.toggle("hidden");
+      btn.textContent = more.classList.contains("hidden") ? "Read More" : "Show Less";
+    }
+
+    // Active nav highlighting on scroll
+    window.addEventListener("scroll", () => {
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".topnav a");
+      let current = "";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        const sectionHeight = section.offsetHeight;
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // GitHub Projects
+    async function loadGitHubRepos() {
+      const response = await fetch("https://api.github.com/users/tanyabhardwaj20/repos");
+      const data = await response.json();
+      const container = document.getElementById("github-projects");
+
+      data.slice(0, 4).forEach(repo => {
+        const card = document.createElement("div");
+        card.className = "w3-col l6 m6 w3-margin-bottom";
+        card.innerHTML = `
+          <div class="w3-card w3-dark-grey w3-padding-large">
+            <h3>${repo.name}</h3>
+            <p>${repo.description || 'No description provided.'}</p>
+            <a href="${repo.html_url}" target="_blank" class="neon-button">View on GitHub</a>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Medium Blogs
+    async function loadMediumPosts() {
+      const proxy = "https://api.rss2json.com/v1/api.json?rss_url=";
+      const feedUrl = encodeURIComponent("https://medium.com/feed/@tanya-bhardwaj20");
+      const response = await fetch(proxy + feedUrl);
+      const data = await response.json();
+      const container = document.getElementById("medium-posts");
+
+      if (data.items) {
+        data.items.slice(0, 3).forEach(post => {
+          const card = document.createElement("div");
+          card.className = "w3-card w3-dark-grey w3-padding-large w3-margin-bottom";
+          card.innerHTML = `
+            <h3>${post.title}</h3>
+            <p>${new Date(post.pubDate).toLocaleDateString()}</p>
+            <a href="${post.link}" target="_blank" class="neon-button">Read on Medium</a>
+          `;
+          container.appendChild(card);
+        });
+      }
+    }
+
+    // Cursor glow animation
+    const cursorGlow = document.getElementById("cursor-glow");
+    document.addEventListener("mousemove", (e) => {
+      cursorGlow.style.left = `${e.clientX}px`;
+      cursorGlow.style.top = `${e.clientY}px`;
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      loadGitHubRepos();
+      loadMediumPosts();
+    });
+  </script>
+</body>
+</html>
