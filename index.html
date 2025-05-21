@@ -12,10 +12,12 @@
       scroll-behavior: smooth;
     }
 
-    body {
+    body, html {
       margin: 0;
-      padding-top: 70px;
+      width: 100%;
+      overflow-x: hidden;
       font-family: "Montserrat", sans-serif;
+      padding-top: 70px;
       background: radial-gradient(ellipse at center, #1c1c1c 0%, #0a0a0a 100%);
       background-attachment: fixed;
       color: #e0e0e0;
@@ -98,13 +100,43 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(100, 255, 218, 0.1), transparent 70%);
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(100, 255, 218, 0.15), transparent 70%);
       pointer-events: none;
       transform: translate(-50%, -50%);
       z-index: 0;
-      filter: blur(50px);
+      filter: blur(70px);
+      opacity: 0.6;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      .topnav {
+        flex-direction: column;
+        padding: 12px;
+        gap: 12px;
+      }
+
+      .w3-row-padding {
+        flex-direction: column;
+      }
+
+      .w3-half {
+        width: 100% !important;
+      }
+
+      .w3-jumbo {
+        font-size: 36px !important;
+      }
+
+      .svg-wave {
+        height: 40px;
+      }
     }
   </style>
 </head>
